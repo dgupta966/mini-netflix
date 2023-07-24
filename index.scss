@@ -1,0 +1,90 @@
+$box-shadow-netflix : 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+$netflix-color : #E50914;
+
+@mixin truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: $box-shadow-netflix;
+
+  &__title > a > img {
+    height: 30px;
+    width: 60px;
+    padding: 10px;
+  }
+
+  &__nav {
+    > ul > li {
+      :hover{
+        color: $netflix-color;
+      }
+      list-style-type: none;
+      padding: 20px;
+      > a {
+        text-decoration: none;
+      }
+    }
+    > ul {
+      display: flex;
+    }
+  }
+}
+
+.movie {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  >a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.movie-card {
+  padding: 10px;
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  box-shadow:$box-shadow-netflix;
+  &__name{
+    font-size: large;
+    color: $netflix-color;
+    font-weight: bold;
+    @include truncate-text;
+  }
+  &__year {
+    font-size: small;
+    font-weight: bold;
+    color: gray;
+  }
+  &__img{
+    height: 150px;
+    width: 100%;
+  }
+}
+
+.movie-details {
+  box-shadow: $box-shadow-netflix;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  &__name{
+    max-width: 320px;
+    @include truncate-text;
+  }
+  &__tag{
+    font-weight: bold;
+  }
+}
