@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
+import { LOGO_URL } from "./constants";
 
 export const Title = () => (
   <div className="header__title">
     <a href="/">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png"
-        alt="logo"
-      />
+      <img src={LOGO_URL} alt="logo" />
     </a>
   </div>
 );

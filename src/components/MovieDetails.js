@@ -1,21 +1,10 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import useMovieDetails from "../hook/useMovieDetails";
 
 const MovieDetails = () => {
   const { id } = useParams();
-  const [movie, setMovie] = useState(null);
-  console.log(id);
-  useEffect(() => {
-    getMovieData();
-  }, []);
 
-  const getMovieData = async () => {
-    const data = await fetch(
-      `https://www.omdbapi.com/?i=${id}&apikey=aaa2f8d2`
-    );
-    const json = await data.json();
-    setMovie(json);
-  };
+  const movie = useMovieDetails(id);
 
   if (!movie) {
     return <div>Loading ...</div>;

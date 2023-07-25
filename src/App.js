@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import "../index.scss";
+import "./styles/index.scss";
 import MovieDetails from "./components/MovieDetails";
 
 const AppLayout = () => {
