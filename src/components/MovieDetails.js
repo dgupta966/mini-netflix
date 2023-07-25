@@ -15,7 +15,6 @@ const MovieDetails = () => {
     );
     const json = await data.json();
     setMovie(json);
-    console.log(json);
   };
 
   if (!movie) {
@@ -37,7 +36,9 @@ const MovieDetails = () => {
   return (
     <div className="movie-details">
       <span>
-        <h1 className="movie-details__name">{Title}</h1>
+        <h1 className="movie-details__name" title={Title}>
+          {Title}
+        </h1>
         <img className="movie-details__img" src={Poster} alt={Title} />
 
         <div>

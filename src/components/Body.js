@@ -14,7 +14,6 @@ const Body = () => {
     );
     const json = await data.json();
     setMovies(json.Search);
-    console.log(json);
   };
 
   if (movies.length === 0) {
