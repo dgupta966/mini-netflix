@@ -34,6 +34,7 @@ $netflix-color : #E50914;
       padding: 20px;
       > a {
         text-decoration: none;
+        font-weight: bold;
       }
     }
     > ul {
@@ -83,10 +84,27 @@ $netflix-color : #E50914;
   display: flex;
   justify-content: center;
   &__name{
+    color:$netflix-color;
     max-width: 320px;
     @include truncate-text;
   }
   &__tag{
+    color:$netflix-color;
+    font-size: 14px;
     font-weight: bold;
+  }
+  &__title {
+    font-size: small;
+    color: gray;
+  }
+}
+
+.error {
+  color: $netflix-color;
+  box-shadow:$box-shadow-netflix;
+  padding: 50px;
+  margin: 50px;
+  >a {
+    text-decoration: none;
   }
 }

@@ -1,7 +1,7 @@
 import MovieCard from "./MovieCard";
 import useMovies from "../hook/useMovies";
 
-const Body = () => {
+const Home = () => {
   const movies = useMovies();
 
   if (movies.length === 0) {
@@ -16,4 +16,4 @@ const Body = () => {
     </div>
   );
 };
-export default Body;
+export default Home;

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
-import Body from "./components/Body";
+import Home from "./components/Home";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./styles/index.scss";
@@ -24,7 +24,7 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: <Home />,
       },
       {
         path: "/movie/:id",
